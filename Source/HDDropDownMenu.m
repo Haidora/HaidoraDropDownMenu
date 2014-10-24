@@ -16,8 +16,6 @@
 
 @interface HDDropDownMenu ()
 
-@property (nonatomic, strong) UIView *mSuperView;
-
 @property (nonatomic, assign) NSInteger currentSectionIndex;
 @property (nonatomic, assign) NSInteger currentCellIndex;
 
@@ -138,9 +136,9 @@
     if (_show)
     {
         _tempSectionIndex = _currentSectionIndex;
-        [self.superview addSubview:_hudView];
-        [self.superview addSubview:_sectionTableView];
-        [self.superview addSubview:_cellTableView];
+        [self.mSuperView addSubview:_hudView];
+        [self.mSuperView addSubview:_sectionTableView];
+        [self.mSuperView addSubview:_cellTableView];
 
         _hudView.frame = hudFrame;
         _sectionTableView.frame = sectionFrame;
@@ -214,11 +212,6 @@
 
 #pragma mark
 #pragma mark Getter
-
-- (UIView *)mSuperView
-{
-    return self.superview;
-}
 
 - (NSInteger)numberOfSections
 {

@@ -35,6 +35,9 @@
 @property (nonatomic, strong) UIFont *secionTitleFont;
 @property (nonatomic, strong) UIFont *cellTitleFont;
 
+@property (nonatomic, weak) UIView *mSuperView;
+@property (nonatomic, readonly) UIButton *sectionBtn;
+
 @end
 
 #pragma mark
